@@ -15,9 +15,20 @@ Watch for:
 - When they correct your process (not just your output)
 - When they coordinate across multiple Claude sessions — handoffs, context-passing, using tools (issues, PRs, files) as communication layers between sessions
 
+Also watch for the absence:
+- When they accept output without challenge that warranted scrutiny
+- When scope drifts and they don't catch it
+- When you self-correct something they missed
+- When polished output gets waved through uncritically (artifact paradox in action)
+- When a session coasts — no redirects, no kills, no pushback
+
+Track both. The moments they steer and the moments they don't are equally valuable data.
+
 ## When the user says "wrap", "done", "ship it", or invokes /marmite again:
 
-Write a digest to `decisions/digests/YYYY-MM-DD-session-N.md`. Check existing files in that directory to get the right sequence number.
+**Always write to the decision-trail repo, not the current working directory.**
+
+Write a digest to `/Users/elliot/decision-trail/decisions/digests/YYYY-MM-DD-session-N.md`. Check existing files in that directory to get the right sequence number.
 
 Format:
 
@@ -36,11 +47,9 @@ Format:
 
 Think collaboration diary, not project status update. Someone should skim it in 15 seconds and understand how this person works with AI — not what was built.
 
-After writing, commit and push:
+After writing, commit and push from the decision-trail repo:
 ```bash
-git add decisions/digests/YYYY-MM-DD-session-N.md
-git commit -m "digest: [2-3 word summary]"
-git push
+cd /Users/elliot/decision-trail && git add decisions/digests/YYYY-MM-DD-session-N.md && git commit -m "digest: [2-3 word summary]" && git push
 ```
 
 ## What NOT to track
